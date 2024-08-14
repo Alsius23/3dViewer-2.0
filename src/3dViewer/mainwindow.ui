@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1600</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1600</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="s21::WidgetGL" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>900</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>85</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Имя файла:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>40</y>
+      <width>135</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Количетсво ребер:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>150</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Количество вершин:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="file_name">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>0</y>
+      <width>315</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vertex_count">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>20</y>
+      <width>250</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="face_count">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>40</y>
+      <width>265</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_x">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>150</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_y">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>150</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_z">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>150</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>x:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>150</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>y:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>150</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>z:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>130</y>
+      <width>160</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Изменение координат</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>60</y>
+      <width>160</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Загрузка файла</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="file_change_name">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>80</y>
+      <width>315</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>80</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Имя файла:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="file_button">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>105</y>
+      <width>200</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Применить</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>180</y>
+      <width>200</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Изменение угла поворота</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>x:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_x_rotation">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_y_rotation">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>200</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>200</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>y:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_z_rotation">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>200</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>200</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>z:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>225</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Масштабирование</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="scale_koef">
+    <property name="geometry">
+     <rect>
+      <x>115</x>
+      <y>245</y>
+      <width>120</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>245</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Коэффициент</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="scale">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>245</x>
+      <y>245</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Применить</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>280</y>
+      <width>180</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Настройки отображения</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="projection">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>300</y>
+      <width>180</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="insertPolicy">
+     <enum>QComboBox::InsertAtCurrent</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+    </property>
+    <item>
+     <property name="text">
+      <string>Центральная</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Параллельная</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Тип проекции :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Тип линии :</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="linetype">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>330</y>
+      <width>180</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="insertPolicy">
+     <enum>QComboBox::InsertAtCurrent</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+    </property>
+    <item>
+     <property name="text">
+      <string>Сплошная</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Пунктирная</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Толщина линии :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>390</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Цвет линии :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="line_color">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>390</y>
+      <width>180</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выбор цвета</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edge_size">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>360</y>
+      <width>181</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>500</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Цвет вершины :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>210</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Тип отображения вершины :</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="vertex_type">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>440</y>
+      <width>170</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="insertPolicy">
+     <enum>QComboBox::InsertAtCurrent</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+    </property>
+    <item>
+     <property name="text">
+      <string>Отсутствует</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Круг</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Квадрат</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>470</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Размер вершины :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="vertex_size">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>470</y>
+      <width>170</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="vertex_color">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>500</y>
+      <width>170</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выбор цвета</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_24">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>550</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Цвет фона :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="background_color">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>550</y>
+      <width>170</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выбор цвета</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1600</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>s21::WidgetGL</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">widgetgl.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
